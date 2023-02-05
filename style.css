@@ -1,0 +1,359 @@
+ /* 
+    ---01 TYPOGRAPHY
+
+    - FONT SIZE SYSTEM (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+    - FONT-WEIGHS
+    DEFAULTS: 400
+
+    - LINE-HEIGHT
+    DEFAULTS: 1
+
+    --- 02 COLORS
+
+  ### Primary
+
+- Dark Blue: hsl(233, 26%, 24%)
+- Lime Green: hsl(136, 65%, 51%)
+- Bright Cyan: hsl(192, 70%, 51%)
+
+### Neutral
+
+- Grayish Blue: hsl(233, 8%, 62%)
+- Light Grayish Blue: hsl(220, 16%, 96%)
+- Very Light Gray: hsl(0, 0%, 98%)
+- White: hsl(0, 0%, 100%)
+
+
+    --- 03 SHADOWS
+    --- 04 BORDER-RADUIS
+    --- 05 WHITESPACING
+
+    - SPACING SYSTEM (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+*/
+
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: sans-serif;
+     font-weight: 400;
+     line-height: 1;
+     color: #444;
+     overflow-x: hidden;
+ }
+
+ html {
+     /* scroll-behavior: smooth; */
+     font-size: 62.5%;
+ }
+
+ /*****************************/
+ /* REUSEABLE GRID */
+ /*****************************/
+
+ .grid {
+     display: grid;
+     gap: 6.4rem;
+ }
+
+ .grid-align {
+     align-items: center;
+ }
+
+ .grid--2-cols {
+     grid-template-columns: repeat(2, 1fr);
+ }
+
+ .grid--3-cols {
+     grid-template-columns: repeat(3, 1fr);
+ }
+
+ .grid--4-cols {
+     grid-template-columns: repeat(4, 1fr);
+ }
+
+ /*****************************/
+ /* GENERAL STYLES */
+ /*****************************/
+
+ .container {
+     margin: 0 auto;
+     padding: 0 3.2rem;
+     max-width: 120rem;
+ }
+
+ .primary-heading {
+     font-size: 4.8rem;
+     line-height: 1.4;
+     letter-spacing: 2px;
+     color: hsl(233, 26%, 24%);
+     font-family: 'Public Sans', sans-serif;
+     font-weight: 400;
+ }
+
+ .secondary-heading {
+     font-size: 3.2rem;
+     line-height: 1.4;
+     letter-spacing: 2px;
+     color: hsl(233, 26%, 24%);
+     font-family: 'Public Sans', sans-serif;
+     font-weight: 400;
+ }
+
+ /*****************************/
+ /* NAVIGATION STYLES */
+ /*****************************/
+
+ .main-nav {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1.2rem;
+ }
+
+ .nav-list {
+     display: flex;
+     gap: 1.6rem;
+     list-style: none;
+ }
+
+ .nav-list-item {
+     font-size: 1.8rem;
+     text-decoration: none;
+     color: #666;
+     transition: all 1s;
+ }
+
+ .nav-list-item:hover {
+     border-bottom: 1px solid hsl(136, 65%, 51%);
+ }
+
+ .btn {
+     border: none;
+     font-size: 1.6rem;
+     font-weight: 600;
+     border-radius: 9rem;
+     padding: 0.8rem 1.6rem;
+     background: linear-gradient(271deg, hsl(192, 70%, 51%), hsl(136, 65%, 51%));
+     color: #fff;
+     transition: all 1s;
+     cursor: pointer;
+ }
+
+ .btn:hover {
+     filter: brightness(1);
+     opacity: 60%;
+ }
+
+
+
+ /*****************************/
+ /* HERO-SECTION STYLES */
+ /*****************************/
+
+ .hero {
+     max-width: 140rem;
+     margin: 0;
+     margin-left: auto;
+     margin-bottom: 6.2rem;
+     padding: 0 3.2rem;
+     display: grid;
+     grid-template-columns: 1fr 2fr;
+     gap: 2.4rem;
+     align-items: center;
+ }
+
+ .hero-img {
+     position: relative;
+ }
+
+ .hero-img::before {
+     content: "";
+     display: block;
+     position: absolute;
+
+     transform: translate(-50 -50);
+     background-image: url("images/image-mockups.png");
+     background-position: center;
+     background-size: cover;
+
+     width: 90%;
+     height: 32rem;
+     padding-bottom: 65%;
+     z-index: 1;
+     left: 9.6rem;
+ }
+
+ .hero-img img {
+     width: 100%;
+
+ }
+
+ .hero-text {
+     font-size: 1.8rem;
+     line-height: 1.6;
+     color: hsl(233, 8%, 62%);
+     margin: 2.4rem 0;
+ }
+
+
+ /*****************************/
+ /* FEATURES STYLES */
+ /*****************************/
+
+ .section-features {
+     padding: 9.6rem 0;
+     background-color: #f4f4f4;
+ }
+
+ .features-text {
+     font-size: 1.8rem;
+     line-height: 1.6;
+     color: hsl(233, 8%, 62%);
+     margin: 2.4rem 0;
+     margin-bottom: 4.8rem;
+ }
+
+ .banking-heading {
+     font-size: 1.8rem;
+     color: hsl(233, 26%, 24%);
+     font-family: 'Public Sans', sans-serif;
+     margin-top: 3.2rem;
+ }
+
+ .banking-text {
+     font-size: 1.6rem;
+     color: hsl(233, 8%, 62%);
+     line-height: 1.6;
+     margin-top: 2.4rem;
+ }
+
+ /*****************************/
+ /* ARTICLES STYLES */
+ /*****************************/
+ .section-articles {
+     padding: 6.2rem 0;
+
+ }
+
+ .article-box {
+     margin-top: 4.8rem;
+ }
+
+ .article-img {
+     width: 100%;
+ }
+
+ .article-name {
+     font-size: 1.2rem;
+     color: hsl(233, 8%, 62%);
+     margin-top: 2.4rem;
+ }
+
+ .article-heading {
+     font-size: 1.8rem;
+     color: #444;
+     font-family: 'Public Sans', sans-serif;
+     margin-top: 2.4rem;
+     margin-bottom: 1.4rem;
+     cursor: pointer;
+     transition: all 1s;
+ }
+
+ .article-heading:hover,
+ .article-heading:active {
+     color: hsl(136, 65%, 51%);
+ }
+
+ .article-text {
+     font-size: 1.6rem;
+     color: hsl(233, 8%, 62%);
+
+ }
+
+ /*****************************/
+ /* FOOTER STYLES */
+ /*****************************/
+
+ .footer {
+     padding: 2.4rem 0;
+     background-color: hsl(233, 26%, 24%);
+ }
+
+ .logo-img-footer {
+     background-color: #fff;
+     padding: 0.8rem 1.6rem;
+ }
+
+ .logo-footer {
+     fill: #fff;
+ }
+
+ .socials {
+     display: flex;
+     gap: 1.2rem;
+     margin-top: 2.4rem;
+ }
+
+ .social-icon:hover {
+     fill: hsl(136, 65%, 51%);
+ }
+
+ .footer-link {
+     list-style: none;
+     display: flex;
+     flex-direction: column;
+     gap: 1.6rem;
+ }
+
+ .list-item-footer,
+ .list-item-footer:link,
+ .list-item-footer,
+ .link-item-footer:visited {
+     text-decoration: none;
+     font-size: 1.6rem;
+     color: #fff;
+     transition: all 1s;
+ }
+
+ .list-item-footer:hover,
+ .list-item-footer:active {
+     color: hsl(136, 65%, 51%);
+ }
+
+ .copyright {
+     font-size: 1rem;
+     color: #fff;
+     margin-top: 2.4rem;
+ }
+
+ .footer-flex {
+     display: grid;
+     grid-template-columns: 2fr 1fr;
+ }
+
+ .invite {
+     justify-self: end;
+     align-self: center;
+ }
+
+ .attribution {
+     font-size: 1.4rem;
+     text-align: center;
+     color: #384747;
+     margin-top: 3.2rem;
+ }
+
+ .attribution a {
+     color: #384747;
+     text-decoration: none;
+ }

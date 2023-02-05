@@ -1,0 +1,40 @@
+@media (max-width: 75em) {
+    html {
+        font-size: 53.25%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr 1.5fr;
+    }
+
+}
+
+/*****************************/
+/* Below 944px (Tablets)*/
+/*****************************/
+
+@media (max-width: 59em) {
+    html {
+        font-size: 50%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid--4-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-img::before {
+        padding-bottom: 50%;
+        width: 80%;
+    }
+
+}
+
+/*****************************/
+/* Below 706px (Smaller Tablets)*/
+/*****************************/
+
+@media (max-width:44em) {}
